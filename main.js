@@ -57,6 +57,57 @@ document.querySelectorAll(".reveal").forEach(function (el) {
   io.observe(el);
 });
 
+// Smooth transitions between pages
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+
+    // Fade the page in when it loads
+    body.classList.add("page-entering");
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            body.classList.remove("page-entering");
+        });
+    });
+
+    // Fade out before navigating to another local page
+    document.querySelectorAll("a[href]").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const href = link.getAttribute("href");
+
+            if (
+                !href ||
+                href.startsWith("#") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:") ||
+                link.target === "_blank" ||
+                event.ctrlKey ||
+                event.metaKey ||
+                event.shiftKey ||
+                event.altKey
+            ) {
+                return;
+            }
+
+            const destination = new URL(href, window.location.href);
+
+            if (
+                destination.origin !== window.location.origin ||
+                destination.href === window.location.href
+            ) {
+                return;
+            }
+
+            event.preventDefault();
+            body.classList.add("page-leaving");
+
+            setTimeout(() => {
+                window.location.href = destination.href;
+            }, 300);
+        });
+    });
+});
+
 // Scroll-linked tagline animation
 var s = document.getElementById("slide");
 

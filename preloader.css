@@ -1,0 +1,24 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #070707;
+  z-index: 1000;
+}
+.preloader .ptext {
+  font:
+    600 30px Alexandria,
+    sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.preloader.active {
+  transform: translateY(-100vh);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s;
+}
+.ptext.hide {
+  opacity: 0;
+  transition: 0.5s;
+}

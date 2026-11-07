@@ -1,18 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Via.com — Airline Platform, Ancillaries & Flight Integrations Engineering by Amit Rawat." />
-    <title>Via.com (Company's Work) — Amit Rawat</title>
+
+    <meta name="description"
+        content="My work and contributions at Via.com, working on flight booking experiences, airline integrations, and travel technology." />
+
+    <title>Via.com — Amit Rawat</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <link rel="stylesheet" href="../styles.css" />
 
     <style>
@@ -21,12 +29,11 @@
             --ink: #1e1515;
             --navy: #1e1b4b;
             --rose: #e11d48;
-            --mute: #52525b;
+            --mute: #66636a;
             --yellow: #edfea0;
             --blue: #d0dff8;
-            --line: #e2e2dc;
+            --line: #e7e5df;
             --card: #fff;
-            --radius: 22px;
             --page-width: 1180px;
         }
 
@@ -47,15 +54,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        body, button, a {
-            -webkit-tap-highlight-color: transparent;
-        }
-
         a {
             color: inherit;
         }
 
         /* NAVIGATION */
+
         .site-nav {
             position: fixed;
             z-index: 100;
@@ -71,9 +75,8 @@
             gap: 20px;
             border: 1px solid rgba(30, 21, 21, .09);
             border-radius: 999px;
-            background: rgba(249, 248, 245, .92);
+            background: rgba(249, 248, 245, .94);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             box-shadow: 0 8px 30px rgba(30, 21, 21, .05);
         }
 
@@ -95,7 +98,6 @@
         }
 
         .nav-links a {
-            position: relative;
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
@@ -104,24 +106,23 @@
         }
 
         .nav-links a:hover {
-            color: var(--ink);
+            color: var(--rose);
         }
 
         .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 9px;
             border: 1px solid var(--ink);
             border-radius: 999px;
-            padding: 10px 18px;
+            padding: 12px 20px;
             background: var(--ink);
             color: var(--bg);
             text-decoration: none;
             font-size: 13px;
             font-weight: 700;
-            white-space: nowrap;
-            transition: transform .2s ease, background .2s ease, color .2s ease;
+            transition: .2s ease;
         }
 
         .button:hover {
@@ -130,33 +131,93 @@
             color: var(--ink);
         }
 
+        /* COMMON */
+
+        .container {
+            width: min(100%, var(--page-width));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: clamp(70px, 9vw, 110px) 24px;
+        }
+
+        .section-label {
+            margin-bottom: 18px;
+            color: var(--rose);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin: 0;
+            font: 700 clamp(2rem, 4.5vw, 3.5rem)/1.1 "Space Grotesk", sans-serif;
+            letter-spacing: -2px;
+        }
+
+        .section-description {
+            max-width: 650px;
+            margin-top: 18px;
+            color: var(--mute);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
         /* HERO */
+
         .hero {
             position: relative;
-            min-height: 80svh;
-            padding: 140px 24px 60px;
+            min-height: 78svh;
+            padding: 150px 24px 90px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             background: #180d16;
-            color: #f8fafc;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            top: -250px;
+            right: -120px;
+            border-radius: 50%;
+            background: rgba(225, 29, 72, .15);
+            filter: blur(90px);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            bottom: -250px;
+            left: -100px;
+            border-radius: 50%;
+            background: rgba(237, 254, 160, .08);
+            filter: blur(90px);
         }
 
         .hero-inner {
             position: relative;
             z-index: 2;
-            width: min(100%, 1080px);
+            width: min(100%, 950px);
             margin: 0 auto;
-            text-align: center;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 9px;
-            margin: 0 0 20px;
-            color: rgba(248, 250, 252, 0.7);
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, .7);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 2px;
@@ -173,9 +234,8 @@
 
         .hero h1 {
             margin: 0;
-            font: 700 clamp(3.2rem, 8vw, 6.5rem)/0.95 "Space Grotesk", sans-serif;
-            letter-spacing: -0.06em;
-            color: #fff;
+            font: 700 clamp(3.2rem, 8vw, 6.5rem)/.98 "Space Grotesk", sans-serif;
+            letter-spacing: -5px;
         }
 
         .hero h1 span {
@@ -183,222 +243,411 @@
         }
 
         .hero-subtitle {
-            max-width: 840px;
-            margin: 20px auto 0;
-            color: rgba(248, 250, 252, 0.82);
-            font-size: clamp(15px, 1.8vw, 19px);
-            line-height: 1.6;
+            max-width: 730px;
+            margin: 26px auto 0;
+            color: rgba(255, 255, 255, .78);
+            font-size: clamp(15px, 1.8vw, 18px);
+            line-height: 1.8;
         }
 
         .hero-meta {
-            margin-top: 24px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 28px;
         }
 
         .pill {
-            padding: 6px 14px;
-            border: 1px solid rgba(248, 250, 252, 0.2);
+            padding: 8px 15px;
+            border: 1px solid rgba(255, 255, 255, .18);
             border-radius: 999px;
-            color: rgba(248, 250, 252, 0.85);
+            color: rgba(255, 255, 255, .85);
             font-size: 12px;
-            font-weight: 500;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, .05);
         }
 
         .hero-actions {
-            margin-top: 32px;
             display: flex;
             justify-content: center;
-            gap: 14px;
+            gap: 12px;
             flex-wrap: wrap;
+            margin-top: 36px;
         }
 
-        /* 4 THEMES GRID */
-        .themes-section {
+        .hero .button.primary {
+            background: var(--yellow);
+            color: var(--ink);
+            border-color: var(--yellow);
+        }
+
+        .hero .button.secondary {
+            background: rgba(255, 255, 255, .08);
+            color: #fff;
+            border-color: rgba(255, 255, 255, .25);
+        }
+
+        /* OVERVIEW */
+
+        .overview {
             background: #fff;
             border-bottom: 1px solid var(--line);
-            padding: 60px 24px;
         }
 
-        .themes-grid {
+        .overview-layout {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: start;
         }
 
-        .theme-card {
+        .overview-copy p {
+            margin: 20px 0 0;
+            color: var(--mute);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .overview-note {
+            padding: 30px;
+            border-radius: 20px;
             background: var(--bg);
             border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 22px;
-            border-top: 3px solid var(--rose);
         }
 
-        .theme-card h4 {
-            font: 700 16px "Space Grotesk", sans-serif;
-            margin: 0 0 8px 0;
-            color: var(--ink);
+        .overview-note h3 {
+            margin: 0 0 18px;
+            font: 700 19px "Space Grotesk", sans-serif;
         }
 
-        .theme-card p {
+        .overview-note ul {
+            padding: 0;
             margin: 0;
-            color: var(--mute);
-            font-size: 13.5px;
-            line-height: 1.5;
+            list-style: none;
         }
 
-        /* SHARED SECTIONS */
-        .section {
-            padding: clamp(70px, 9vw, 110px) 24px;
-        }
-
-        .container {
-            width: min(100%, var(--page-width));
-            margin: 0 auto;
-        }
-
-        .section-label {
-            margin-bottom: 20px;
-            color: var(--mute);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* PROJECTS LIST */
-        .projects-list {
+        .overview-note li {
             display: flex;
-            flex-direction: column;
-            gap: 22px;
-            margin-top: 35px;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            color: var(--mute);
+            font-size: 14px;
         }
 
-        .project-item {
-            background: #fff;
+        .overview-note li:last-child {
+            border-bottom: 0;
+        }
+
+        .overview-note i {
+            color: var(--rose);
+            width: 18px;
+        }
+
+        /* AREAS OF WORK */
+
+        .work-section {
+            background: var(--bg);
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 42px;
+        }
+
+        .work-card {
+            min-height: 220px;
+            padding: 30px;
             border: 1px solid var(--line);
             border-radius: 20px;
-            padding: 30px;
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-        .project-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+            background: #fff;
+            transition: transform .25s ease, box-shadow .25s ease;
         }
 
-        .project-item-top {
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, .05);
+        }
+
+        .work-card-icon {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 14px;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            background: #fff0f3;
+            color: var(--rose);
+            font-size: 18px;
+        }
+
+        .work-card h3 {
+            margin: 0 0 12px;
+            font: 700 21px "Space Grotesk", sans-serif;
+        }
+
+        .work-card p {
+            margin: 0;
+            color: var(--mute);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* SELECTED CONTRIBUTIONS */
+
+        .contributions {
+            background: #fff;
+        }
+
+        .contribution-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 42px;
+        }
+
+        .contribution-card {
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: var(--bg);
+        }
+
+        .contribution-number {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: var(--rose);
+            font: 700 13px "Space Grotesk", sans-serif;
+        }
+
+        .contribution-card h3 {
+            margin: 0 0 12px;
+            font: 700 20px "Space Grotesk", sans-serif;
+        }
+
+        .contribution-card p {
+            margin: 0;
+            color: var(--mute);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* TECHNOLOGIES */
+
+        .tech-section {
+            background: #f1f0eb;
+        }
+
+        .tech-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tech-content .section-description {
+            margin-bottom: 0;
+        }
+
+        .tech-list {
+            display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            max-width: 500px;
         }
 
-        .project-item-index {
-            font: 700 13px "Space Grotesk", sans-serif;
-            color: var(--rose);
-            background: rgba(225, 29, 72, 0.08);
-            padding: 4px 12px;
+        .tech-item {
+            padding: 11px 18px;
+            border: 1px solid #dedbd4;
             border-radius: 999px;
-            display: inline-block;
-        }
-
-        .project-item-theme {
-            font-size: 12px;
-            color: var(--mute);
+            background: #fff;
+            color: var(--ink);
+            font-size: 13px;
             font-weight: 600;
         }
 
-        .project-item h3 {
-            font: 700 22px "Space Grotesk", sans-serif;
-            margin: 0 0 14px 0;
-            color: var(--ink);
-        }
-
-        .project-item ul {
-            padding-left: 20px;
-            margin: 0 0 16px 0;
-            color: var(--mute);
-            font-size: 15px;
-            line-height: 1.65;
-        }
-        .project-item ul li {
-            margin-bottom: 8px;
-        }
-
-        .project-keywords {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            align-items: center;
-            padding-top: 14px;
-            border-top: 1px solid var(--line);
-        }
-
-        .kw-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--mute);
-            margin-right: 6px;
-        }
-
-        .kw-chip {
-            font-size: 12px;
-            background: var(--bg);
-            border: 1px solid var(--line);
-            padding: 2px 10px;
-            border-radius: 999px;
-            color: var(--ink);
-        }
-
-        .git-tag {
-            font-size: 11.5px;
-            background: rgba(56, 189, 248, 0.1);
-            color: #0284c7;
-            padding: 3px 10px;
-            border-radius: 8px;
-            font-family: monospace;
-            margin-left: auto;
-        }
-
         /* BOTTOM CTA */
+
         .bottom-cta {
+            padding: 90px 24px;
             background: var(--ink);
             color: #fff;
             text-align: center;
-            padding: 90px 24px;
         }
 
         .bottom-cta h2 {
-            font: 700 clamp(2.4rem, 5vw, 4rem) "Space Grotesk", sans-serif;
-            margin: 0 0 16px 0;
+            max-width: 700px;
+            margin: 0 auto;
+            font: 700 clamp(2.4rem, 5vw, 4rem)/1.1 "Space Grotesk", sans-serif;
+            letter-spacing: -2px;
         }
+
         .bottom-cta h2 span {
             color: var(--yellow);
         }
 
-        @media (max-width: 1024px) {
-            .themes-grid { grid-template-columns: repeat(2, 1fr); }
+        .bottom-cta p {
+            max-width: 560px;
+            margin: 20px auto 30px;
+            color: rgba(255, 255, 255, .7);
+            font-size: 15px;
+            line-height: 1.8;
         }
 
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-cta .button.primary {
+            background: var(--yellow);
+            color: var(--ink);
+            border-color: var(--yellow);
+        }
+
+        .bottom-cta .button.secondary {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255, 255, 255, .3);
+        }
+
+        /* FOOTER */
+
+        .contact {
+            background: var(--ink);
+            color: #fff;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .contact-main {
+            padding: 30px 24px;
+        }
+
+        .contact-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            color: #fff;
+            font: 700 20px "Space Grotesk", sans-serif;
+            text-decoration: none;
+        }
+
+        .footer-brand > span:first-child {
+            color: var(--rose);
+        }
+
+        .brand-period {
+            color: var(--yellow);
+        }
+
+        .footer-nav,
+        .footer-socials {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .footer-nav a,
+        .footer-socials a {
+            color: rgba(255, 255, 255, .65);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color .2s ease;
+        }
+
+        .footer-nav a:hover,
+        .footer-socials a:hover {
+            color: var(--yellow);
+        }
+
+        /* RESPONSIVE */
+
         @media (max-width: 768px) {
-            .site-nav { padding: 10px 16px; }
-            .nav-links { display: none; }
-            .themes-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.8rem; }
+            .site-nav {
+                padding: 10px 16px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .site-nav .button {
+                padding: 10px 14px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 75svh;
+                padding-top: 140px;
+            }
+
+            .hero h1 {
+                font-size: clamp(3rem, 12vw, 4.5rem);
+                letter-spacing: -3px;
+            }
+
+            .overview-layout {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .work-grid,
+            .contribution-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero-meta {
+                gap: 7px;
+            }
+
+            .pill {
+                font-size: 11px;
+                padding: 7px 11px;
+            }
+
+            .work-card,
+            .contribution-card {
+                padding: 23px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Site Nav -->
+    <!-- NAVIGATION -->
+
     <header class="site-nav">
+
         <a class="brand" href="../index.html">
             <span><span class="brand-mark">@</span>mit rawat</span>
         </a>
@@ -412,294 +661,551 @@
 
         <div class="nav-actions">
             <a href="../experience.html" class="button">
-                <i class="fa-solid fa-briefcase"></i> Experience Timeline
+                <i class="fa-solid fa-briefcase"></i>
+                My Experience
             </a>
         </div>
+
     </header>
 
+
     <main>
-        <!-- Hero -->
+
+        <!-- HERO -->
+
         <section class="hero">
+
             <div class="hero-inner">
+
                 <div class="eyebrow">
                     <span class="eyebrow-dot"></span>
-                    Company's Work · Airline & Travel Distribution Platform
+                    Professional Experience · Travel Technology
                 </div>
 
-                <h1>Via.com <span>Engineering</span></h1>
-                
+                <h1>
+                    Via.com
+                </h1>
+
                 <p class="hero-subtitle">
-                    Architected and engineered core flight distribution workflows, high-throughput third-party airline APIs, 
-                    SSR ancillaries post-booking engines, complex fare rules, and mission-critical production reliability across B2B & B2C platforms.
+                    Working on the technology behind flight bookings, airline
+                    integrations, and travel services. A look at some of the
+                    projects and contributions I've been part of.
                 </p>
 
                 <div class="hero-meta">
-                    <span class="pill">Java & Spring Boot</span>
-                    <span class="pill">Indigo postBookingFlowV2</span>
-                    <span class="pill">Microservices</span>
-                    <span class="pill">BookNTravel v2</span>
-                    <span class="pill">Akasa Air FFP</span>
-                    <span class="pill">GDS Integrations</span>
+                    <span class="pill">Java</span>
+                    <span class="pill">Spring Boot</span>
+                    <span class="pill">PostgreSQL</span>
+                    <span class="pill">Backend Development</span>
+                    <span class="pill">Travel Technology</span>
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#projects-list" class="button" style="background: var(--yellow); color: var(--ink); border-color: var(--yellow);">
-                        <i class="fa-solid fa-list-check"></i> Explore Production Projects
+
+                    <a href="#work" class="button primary">
+                        Explore My Work
+                        <i class="fa-solid fa-arrow-down"></i>
                     </a>
-                    <a href="../experience.html" class="button" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3);">
-                        <i class="fa-solid fa-arrow-left"></i> Experience Section
+
+                    <a href="../experience.html" class="button secondary">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Experience Timeline
                     </a>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- 4 Headline Themes -->
-        <section class="themes-section">
-            <div class="container">
-                <div class="themes-grid">
-                    <div class="theme-card">
-                        <h4>1. Post-Booking & Ancillaries</h4>
-                        <p>Indigo post-SSR / sell-SSR, retrieve-booking API extensions for seats, meals, and baggage post-ticket issuance.</p>
+
+        <!-- OVERVIEW -->
+
+        <section class="section overview">
+
+            <div class="container overview-layout">
+
+                <div class="overview-copy">
+
+                    <div class="section-label">
+                        The Experience
                     </div>
 
-                    <div class="theme-card">
-                        <h4>2. Fare & Deal Reliability</h4>
-                        <p>Stopover labeling, connecting-flight fixes [VI-2550], Deal Fare 4 commission/oops fixes, B2B deduplication.</p>
-                    </div>
+                    <h2 class="section-heading">
+                        Technology that keeps travel moving.
+                    </h2>
 
-                    <div class="theme-card">
-                        <h4>3. Integrations & Platform</h4>
-                        <p>BookNTravel v2 search/reprice/book path, Akasa Air Frequent Flyer, and special fares (search → contracts + caching).</p>
-                    </div>
+                    <p>
+                        Via.com is a travel technology platform that connects
+                        travellers, agents, airlines, and other travel service
+                        providers.
+                    </p>
 
-                    <div class="theme-card">
-                        <h4>4. Ops & Reporting</h4>
-                        <p>Traveller details bulk upload microservice deployed on India servers, and Fast-Forward refund tally reporting.</p>
-                    </div>
+                    <p>
+                        As part of the development team, I contribute to the
+                        backend systems that support flight searches, bookings,
+                        airline services, and related operations.
+                    </p>
+
+                    <p>
+                        My work involves building new features, connecting
+                        external services, improving existing workflows, and
+                        resolving issues that affect the booking experience.
+                    </p>
+
                 </div>
+
+
+                <div class="overview-note">
+
+                    <h3>What I work on</h3>
+
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-plane"></i>
+                            Flight booking and post-booking services
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-link"></i>
+                            Airline and travel partner integrations
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-tags"></i>
+                            Fare management and booking improvements
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-gears"></i>
+                            Backend automation and reporting
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Production support and system improvements
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
+
         </section>
 
-        <!-- Detailed Projects List -->
-        <section class="section" id="projects-list">
+
+        <!-- AREAS OF WORK -->
+
+        <section class="section work-section" id="work">
+
             <div class="container">
-                <div class="section-label">Production Deliverables</div>
-                <h2 style="font: 700 clamp(2rem, 4vw, 3rem) 'Space Grotesk'; margin: 0 0 10px 0;">Production Deliverables at Via.com</h2>
-                <p style="color: var(--mute); max-width: 700px; font-size: 16px; margin: 0;">
-                    Detailed breakdown of backend services, third-party integrations, and reliability engineering delivered.
+
+                <div class="section-label">
+                    Areas of Contribution
+                </div>
+
+                <h2 class="section-heading">
+                    Different parts of the travel experience.
+                </h2>
+
+                <p class="section-description">
+                    My contributions span multiple areas of the flight booking
+                    platform, from finding the right flight to managing services
+                    after a booking is made.
                 </p>
 
-                <div class="projects-list">
 
-                    <!-- 1 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 01</span>
-                            <span class="project-item-theme">Post-Booking & Ancillaries</span>
+                <div class="work-grid">
+
+                    <article class="work-card">
+
+                        <div class="work-card-icon">
+                            <i class="fa-solid fa-plane-departure"></i>
                         </div>
-                        <h3>Indigo Post-Booking & Post-SSR (postBookingFlowV2)</h3>
-                        <ul>
-                            <li>Designed and implemented post-booking flow (RnD → retrieve-booking changes → post-SSR for seat/meal/baggage).</li>
-                            <li>Built sell-SSR flow for Indigo; added validations, catalogue/API changes, and post-booking actions in retrieve API responses for UI consumption.</li>
-                            <li>Collaborated with product/UI on phased rollout (post-SSR → sell-SSR).</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Resume Keywords:</span>
-                            <span class="kw-chip">post-booking</span>
-                            <span class="kw-chip">ancillaries</span>
-                            <span class="kw-chip">SSR</span>
-                            <span class="kw-chip">retrieve PNR</span>
-                            <span class="kw-chip">API design</span>
-                            <span class="kw-chip">Indigo integration</span>
-                        </div>
+
+                        <h3>Flight Booking & Post-Booking</h3>
+
+                        <p>
+                            Worked on improving booking workflows and adding
+                            services such as seats, meals, and baggage.
+                            Also contributed to features that help travellers
+                            manage their bookings after ticket confirmation.
+                        </p>
+
                     </article>
 
-                    <!-- 2 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 02</span>
-                            <span class="project-item-theme">Fare Rules & Contracts</span>
+
+                    <article class="work-card">
+
+                        <div class="work-card-icon">
+                            <i class="fa-solid fa-globe"></i>
                         </div>
-                        <h3>Special Fare Program Engine</h3>
-                        <ul>
-                            <li>Delivered special fare backend: flow from search through contracts, caching, and coordination with UI/product on senior/student/corporate-style fares.</li>
-                            <li>Debugged cross-team issues (caching, contracts, UI rules).</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">fare rules</span>
-                            <span class="kw-chip">caching</span>
-                            <span class="kw-chip">B2B/B2C flights</span>
-                            <span class="kw-chip">cross-functional delivery</span>
-                        </div>
+
+                        <h3>Airline & Supplier Integrations</h3>
+
+                        <p>
+                            Contributed to connecting airlines and travel
+                            partners with the platform, helping expand available
+                            flight options and support different booking
+                            requirements.
+                        </p>
+
                     </article>
 
-                    <!-- 3 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 03</span>
-                            <span class="project-item-theme">Ops & Microservices</span>
+
+                    <article class="work-card">
+
+                        <div class="work-card-icon">
+                            <i class="fa-solid fa-tags"></i>
                         </div>
-                        <h3>Traveller Details Bulk Upload Microservice</h3>
-                        <ul>
-                            <li>End-to-end bulk traveller document/update feature: RnD, microservice build, hosted + connected to India server, web.xml/config, DOI/formatting, QA and production go-live (with UI team).</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">microservices</span>
-                            <span class="kw-chip">bulk upload</span>
-                            <span class="kw-chip">prod deployment</span>
-                            <span class="kw-chip">document automation</span>
-                        </div>
+
+                        <h3>Fare Management</h3>
+
+                        <p>
+                            Worked on special fare programs, pricing-related
+                            workflows, and improvements to how flight options
+                            and fare information are presented.
+                        </p>
+
                     </article>
 
-                    <!-- 4 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 04</span>
-                            <span class="project-item-theme">Reliability & Bug Triage</span>
-                        </div>
-                        <h3>Deal Fares & Flight Display Correctness</h3>
-                        <ul>
-                            <li>Fixed [VI-2550] class of bugs: stopover/connecting flights shown as NON-STOP across Deal Fares 1–4 (investigate → fix → release).</li>
-                            <li>Shipped fixes for Deal Fare 4 (oops page, commission), duplicate deal fares on B2B, and related connecting-sector issues.</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">deal fares</span>
-                            <span class="kw-chip">flight display</span>
-                            <span class="kw-chip">bug triage</span>
-                            <span class="kw-chip">hotfix</span>
-                            <span class="kw-chip">production support</span>
-                        </div>
-                    </article>
 
-                    <!-- 5 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 05</span>
-                            <span class="project-item-theme">Third-Party Aggregation</span>
-                        </div>
-                        <h3>BookNTravel API v2 Integration</h3>
-                        <ul>
-                            <li>Integrated BookNTravel (search/reprice/book path): code review, merge to master, full integration testing, production release, and follow-up fixes (agent commission, GDS type mismatch, Sabre/BNT misc collision).</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">third-party API</span>
-                            <span class="kw-chip">series/search integration</span>
-                            <span class="kw-chip">go-live</span>
-                            <span class="kw-chip">regression fixes</span>
-                        </div>
-                    </article>
+                    <article class="work-card">
 
-                    <!-- 6 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 06</span>
-                            <span class="project-item-theme">Airline Loyalty</span>
+                        <div class="work-card-icon">
+                            <i class="fa-solid fa-chart-line"></i>
                         </div>
-                        <h3>Akasa Air Frequent Flyer (FFP)</h3>
-                        <ul>
-                            <li>Implemented and released Akasa Air FFP; handled manual-booking edge cases and API URL updates through QA to live.</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">Akasa Air</span>
-                            <span class="kw-chip">FFP</span>
-                            <span class="kw-chip">loyalty integration</span>
-                            <span class="kw-chip">API rollout</span>
-                        </div>
-                    </article>
 
-                    <!-- 7 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 07</span>
-                            <span class="project-item-theme">Financial Reconciliation</span>
-                        </div>
-                        <h3>Fast-Forward Refunds – Reporting</h3>
-                        <ul>
-                            <li>Fixed Fast-Forward refund tally report (price not captured in report); investigation through merge-ready fix.</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">refund tally</span>
-                            <span class="kw-chip">reporting</span>
-                            <span class="kw-chip">reconciliation</span>
-                            <span class="git-tag">Git: Fast Forward Price not captured in refund tally Report</span>
-                        </div>
-                    </article>
+                        <h3>Automation & Reporting</h3>
 
-                    <!-- 8 -->
-                    <article class="project-item">
-                        <div class="project-item-top">
-                            <span class="project-item-index">Project 08</span>
-                            <span class="project-item-theme">Flight Platform Engineering</span>
-                        </div>
-                        <h3>Supporting Flight Platform Engineering</h3>
-                        <ul>
-                            <li>G9 / 3L fare rules — baggage, flight details, fare rules loading; review and merge.</li>
-                            <li>Fast Forward print ticket / SSR on print — changes per QA, production release.</li>
-                            <li>Unknown Flight enablement for B2B and corporate — test and release.</li>
-                            <li>Email fares (&ge;3 segments) and assorted deal-fare / Air India GDS production issues.</li>
-                        </ul>
-                        <div class="project-keywords">
-                            <span class="kw-label">Keywords:</span>
-                            <span class="kw-chip">G9 / 3L fare rules</span>
-                            <span class="kw-chip">print ticket SSR</span>
-                            <span class="kw-chip">Unknown Flight</span>
-                            <span class="kw-chip">Air India GDS</span>
-                        </div>
+                        <p>
+                            Built and improved backend workflows that simplify
+                            operational tasks, support bulk updates, and make
+                            important booking and refund information easier
+                            to track.
+                        </p>
+
                     </article>
 
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Bottom CTA -->
+
+        <!-- SELECTED CONTRIBUTIONS -->
+
+        <section class="section contributions">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Selected Contributions
+                </div>
+
+                <h2 class="section-heading">
+                    A closer look at what I've worked on.
+                </h2>
+
+                <p class="section-description">
+                    A selection of features, integrations, and improvements
+                    I've contributed to as part of the development team.
+                </p>
+
+
+                <div class="contribution-list">
+
+
+                    <article class="contribution-card">
+
+                        <span class="contribution-number">
+                            01 / BOOKING EXPERIENCE
+                        </span>
+
+                        <h3>Post-Booking Services</h3>
+
+                        <p>
+                            Worked on Indigo's post-booking features, including
+                            the ability to manage additional services such as
+                            seats, meals, and baggage. Also contributed to
+                            improving the booking management experience.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contribution-card">
+
+                        <span class="contribution-number">
+                            02 / FARE MANAGEMENT
+                        </span>
+
+                        <h3>Special Fare Programs</h3>
+
+                        <p>
+                            Contributed to special fare functionality for
+                            different customer categories, improving how
+                            eligible fares are handled and displayed across
+                            the booking journey.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contribution-card">
+
+                        <span class="contribution-number">
+                            03 / PARTNER INTEGRATION
+                        </span>
+
+                        <h3>Travel Partner Integration</h3>
+
+                        <p>
+                            Worked on integrating an external travel partner
+                            into the booking platform, supporting flight search,
+                            fare confirmation, and booking workflows.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contribution-card">
+
+                        <span class="contribution-number">
+                            04 / AIRLINE SERVICES
+                        </span>
+
+                        <h3>Airline Loyalty Features</h3>
+
+                        <p>
+                            Contributed to the integration of Akasa Air's
+                            frequent flyer functionality, helping support
+                            loyalty-related features within the booking
+                            experience.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contribution-card">
+
+                        <span class="contribution-number">
+                            05 / PLATFORM IMPROVEMENTS
+                        </span>
+
+                        <h3>Flight Information & Reliability</h3>
+
+                        <p>
+                            Worked on resolving issues related to flight
+                            information, connecting journeys, fare display,
+                            and booking accuracy to improve the reliability
+                            of the platform.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contribution-card">
+
+                        <span class="contribution-number">
+                            06 / AUTOMATION & OPERATIONS
+                        </span>
+
+                        <h3>Operational Tools & Reporting</h3>
+
+                        <p>
+                            Contributed to a bulk traveller information
+                            management feature and improvements to refund
+                            reporting, helping simplify day-to-day operational
+                            processes.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+
+        <section class="section tech-section">
+
+            <div class="container tech-content">
+
+                <div>
+
+                    <div class="section-label">
+                        Tools & Technologies
+                    </div>
+
+                    <h2 class="section-heading">
+                        The tools behind the work.
+                    </h2>
+
+                    <p class="section-description">
+                        Technologies and tools I've worked with while building,
+                        maintaining, and improving backend applications.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-list">
+
+                    <span class="tech-item">Java</span>
+                    <span class="tech-item">Spring Boot</span>
+                    <span class="tech-item">REST APIs</span>
+                    <span class="tech-item">PostgreSQL</span>
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Docker</span>
+                    <span class="tech-item">Jenkins</span>
+                    <span class="tech-item">Git</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM CTA -->
+
         <section class="bottom-cta">
+
             <div class="container">
-                <h2>Explore More of <span>My Work</span></h2>
+
+                <h2>
+                    There's more to <span>what I build.</span>
+                </h2>
+
                 <p>
-                    Check out personal full-stack platforms or view the complete career experience timeline.
+                    Outside my professional work, I enjoy building personal
+                    projects, experimenting with new technologies, and turning
+                    ideas into working products.
                 </p>
 
-                <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-                    <a href="travelBuddy.html" class="button" style="background: var(--yellow); color: var(--ink); border-color: var(--yellow); padding: 12px 28px;">
-                        <i class="fa-solid fa-map-location-dot"></i> View Travel Buddy Project
+                <div class="cta-actions">
+
+                    <a href="travelBuddy.html" class="button primary">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        Travel Buddy Project
                     </a>
-                    <a href="../experience.html" class="button" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3); padding: 12px 28px;">
-                        <i class="fa-solid fa-briefcase"></i> Experience Timeline
+
+                    <a href="../work.html" class="button secondary">
+                        <i class="fa-solid fa-layer-group"></i>
+                        Explore All Projects
                     </a>
-                    <a href="../work.html" class="button" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3); padding: 12px 24px;">
-                        ← All Work Items
+
+                    <a href="../experience.html" class="button secondary">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Experience Timeline
                     </a>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
-    <footer class="contact" id="contact">
+
+    <!-- FOOTER -->
+
+     <footer class="contact" id="contact">
         <div class="wrap contact-main">
+
+            <div class="contact-top">
+                <span class="contact-eyebrow">
+                    <span class="status-dot"></span>
+                    HAVE A PROJECT IN MIND?
+                </span>
+                <span class="contact-index">LET'S CONNECT — <span id="year"></span></span>
+            </div>
+
+            <div class="contact-content">
+
+                <div class="contact-heading">
+                    <h2>Let's make<br />something <span>great.</span></h2>
+                    <p>
+                        I enjoy building useful software, solving backend problems and
+                        turning ideas into real products. Have an opportunity or an
+                        interesting idea? Let's talk.
+                    </p>
+                </div>
+
+                <div class="contact-side">
+                    <span class="contact-label">Got a problem worth solving? Let's BUILD.</span>
+
+                    <a class="contact-email" href="mailto:amitsr0208@gmail.com?subject=Let's%20Connect">
+                        amitsr0208@gmail.com
+                        <span class="contact-arrow">↗</span>
+                    </a>
+
+                    <a class="contact-phone" href="tel:+919643362998">
+                        +91 96433 62998
+                    </a>
+
+                    <div class="contact-actions">
+                        <a class="btn fill" href="mailto:amitsr0208@gmail.com?subject=Let's%20Connect">
+                            Say Hello <span>↗</span>
+                        </a>
+
+                        <a class="btn resume-btn" href="./resume/amitResume2026.pdf" download>
+                            Download Résumé ↓
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="contact-bottom">
-                <a class="footer-brand" href="../index.html">
+
+                <a class="footer-brand" href="#top">
                     <span>@</span>mit rawat<span class="brand-period">.</span>
                 </a>
+
                 <div class="footer-nav">
-                    <a href="../index.html">Home</a>
-                    <a href="../about.html">About</a>
-                    <a href="../work.html">Work</a>
-                    <a href="../experience.html">Experience</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About</a>
+                    <a href="./work.html">Work</a>
+                    <a href="./experience.html">Experience</a>
                 </div>
+
                 <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/amit-rawat-47713020" target="_blank" rel="noopener noreferrer">in ↗</a>
-                    <a href="https://github.com/Rookie0208" target="_blank" rel="noopener noreferrer">gh ↗</a>
+                    <a href="https://www.linkedin.com/in/amit-rawat-47713020" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        in <span>↗</span>
+                    </a>
+                    <a href="https://github.com/Rookie0208" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        gh <span>↗</span>
+                    </a>
+                    <a href="https://www.instagram.com/amitrawat0208" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        ig <span>↗</span>
+                    </a>
+                    <a href="https://x.com/AmitRawt1" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        x <span>↗</span>
+                    </a>
                 </div>
+
             </div>
+
+            <div class="footer-legal">
+                <span>© <span id="copyright-year"></span> Amit Rawat. All rights reserved.</span>
+                <span>Designed &amp; built with curiosity.</span>
+                <a href="#top">BACK TO TOP ↑</a>
+            </div>
+
         </div>
     </footer>
 
 </body>
-</html>
 
+</html>

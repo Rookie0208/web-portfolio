@@ -1,191 +1,786 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Amit Rawat's professional experience, technical skills, education and achievements.">
+
     <title>Experience | Amit Rawat</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;800&display=swap"
         rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* PAGE CONTENT */
+
+        .experience-intro {
+            max-width: 720px;
+            margin: 0 0 45px;
+            color: var(--mute);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .experience-summary {
+            margin: 10px 0 18px;
+            color: var(--mute);
+            font-size: 14.5px;
+            line-height: 1.8;
+            max-width: 760px;
+        }
+
+        .experience-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .experience-list li {
+            margin-bottom: 13px;
+            padding-left: 3px;
+            color: var(--ink);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .experience-list li b {
+            font-weight: 700;
+        }
+
+        .experience-list li::marker {
+            color: var(--accent, #e11d48);
+        }
+
+        .tech {
+            margin-top: 16px;
+            color: var(--mute);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .case-study-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0 14px;
+        }
+
+        /* EDUCATION */
+
+        .education-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .education-score {
+            color: var(--mute);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* SKILLS */
+
+        .skill-groups {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .skill-group {
+            padding: 22px;
+            border: 1px solid var(--line, #e5e5e5);
+            border-radius: 16px;
+            background: var(--card, #fff);
+        }
+
+        .skill-group h4 {
+            margin: 0 0 15px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .skill-group .chips {
+            margin: 0;
+        }
+
+        /* ACHIEVEMENTS */
+
+        .achievement-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .achievement-item {
+            padding: 22px;
+            border: 1px solid var(--line, #e5e5e5);
+            border-radius: 16px;
+            background: var(--card, #fff);
+        }
+
+        .achievement-item i {
+            margin-bottom: 14px;
+            color: var(--accent, #e11d48);
+            font-size: 19px;
+        }
+
+        .achievement-item p {
+            margin: 0;
+            color: var(--mute);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .section-note {
+            max-width: 700px;
+            margin: -10px 0 25px;
+            color: var(--mute);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 650px) {
+            .skill-groups,
+            .achievement-list {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-list li {
+                font-size: 13.5px;
+            }
+        }
+
+        /* PRINT */
+
+        @media print {
+            .nav,
+            .acts,
+            .contact,
+            .case-study-link,
+            .burger {
+                display: none !important;
+            }
+
+            body {
+                background: #fff !important;
+                color: #000 !important;
+            }
+
+            .wrap {
+                width: 100% !important;
+            }
+
+            .tl li,
+            .skill-group,
+            .achievement-item {
+                break-inside: avoid;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: inherit !important;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <header class="nav"><a class="logo" href="#" title="click me"><span><span class="clr">@</span>mit rawat</span></a>
-        <nav class="links" id="links"><a href="index.html">Home</a><a href="about.html">About</a><a
-                href="work.html">Work</a><a href="experience.html" class=on>Experience</a></nav><a class="btn fill"
-            href="index.html#contact">Get in Touch</a><button class="burger" id="burger" aria-label="Menu"
-            aria-expanded="false"><i class="fa fa-bars"></i></button>
+<body id="top">
+
+    <!-- NAVIGATION -->
+
+    <header class="nav">
+
+        <a class="logo" href="index.html" title="Amit Rawat">
+            <span><span class="clr">@</span>mit rawat</span>
+        </a>
+
+        <nav class="links" id="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="experience.html" class="on">Experience</a>
+        </nav>
+
+        <a class="btn fill" href="index.html#contact">
+            Get in Touch
+        </a>
+
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+        </button>
+
     </header>
+
+
     <main>
+
         <div class="wrap">
+
+            <!-- PAGE HEADING -->
+
             <div class="page-head">
-                <h1>Experience</h1>
-                <div class="acts no-print"><a class="btn fill" href="./resume/amitResume2026.pdf" download>Download PDF
-                        résumé</a><button class="btn" onclick="window.print()">Print this page</button></div>
-            </div>
-            <ol class="tl" style="margin-top:40px">
-                <li class="reveal">
-                    <div class="when">August 2024 – Present<br>Ghaziabad, India</div>
-                    <div>
-                        <h3>Software Development Engineer <small>· Via.com (Ebix)</small></h3>
-                        <p style="margin: 8px 0 14px 0; color: var(--mute); font-size: 14.5px; line-height: 1.6;">
-                            <b>Headline Themes:</b> Post-booking & ancillaries (Indigo post-SSR / sell-SSR, retrieve-booking API extensions) · Fare & deal-fare reliability · Integrations & platform (BookNTravel v2, Akasa FF, special fares) · Ops & reporting (Traveller bulk upload microservice, refund tally reporting).
-                        </p>
-                        <ul>
-                            <li><b>Indigo post-booking & post-SSR (postBookingFlowV2):</b> Designed and implemented post-booking flow (RnD → retrieve-booking changes → post-SSR for seat/meal/baggage). Built sell-SSR flow for Indigo; added validations, catalogue/API changes, and post-booking actions in retrieve API responses for UI consumption. Collaborated with product/UI on phased rollout (post-SSR → sell-SSR). <i>[Keywords: post-booking, ancillaries, SSR, retrieve PNR, API design, Indigo integration]</i></li>
-                            <li><b>Special fare program:</b> Delivered special fare backend: flow from search through contracts, caching, and coordination with UI/product on senior/student/corporate-style fares. Debugged cross-team issues (caching, contracts, UI rules). <i>[Keywords: fare rules, caching, B2B/B2C flights, cross-functional delivery]</i></li>
-                            <li><b>Traveller details bulk upload:</b> End-to-end bulk traveller document/update feature: RnD, microservice build, hosted + connected to India server, web.xml/config, DOI/formatting, QA and production go-live (with UI team). <i>[Keywords: microservices, bulk upload, prod deployment, document automation]</i></li>
-                            <li><b>Deal fares & flight display correctness:</b> Fixed [VI-2550] class of bugs: stopover/connecting flights shown as NON-STOP across Deal Fares 1–4 (investigate → fix → release). Shipped fixes for Deal Fare 4 (oops page, commission), duplicate deal fares on B2B, and related connecting-sector issues. <i>[Keywords: deal fares, flight display, bug triage, hotfix, production support]</i></li>
-                            <li><b>BookNTravel API v2:</b> Integrated BookNTravel (search/reprice/book path): code review, merge to master, full integration testing, production release, and follow-up fixes (agent commission, GDS type mismatch, Sabre/BNT misc collision). <i>[Keywords: third-party API, series/search integration, go-live, regression fixes]</i></li>
-                            <li><b>Akasa Air frequent flyer (FFP):</b> Implemented and released Akasa Air FFP; handled manual-booking edge cases and API URL updates through QA to live.</li>
-                            <li><b>Fast-Forward refunds – reporting:</b> Fixed Fast-Forward refund tally report (price not captured in report); investigation through merge-ready fix. <i>[Git anchor: Fast Forward Price not captured in refund tally Report]</i></li>
-                            <li><b>Supporting flight platform work:</b> G9 / 3L fare rules (baggage, flight details, fare rules loading); Fast Forward print ticket / SSR on print; Unknown Flight enablement for B2B and corporate; Email fares (&ge;3 segments) and assorted deal-fare / Air India GDS production issues.</li>
-                        </ul>
-                        <div style="margin: 12px 0 16px 0;">
-                            <a href="projects/via.html" class="btn" style="padding: 7px 16px; font-size: 13px;">View Full Via.com Case Study ↗</a>
-                        </div>
-                        <p class="tech"><b>Technologies:</b> Java, Spring Boot, Microservices, REST APIs, Indigo APIs, GDS, PostgreSQL, Git, Jenkins, Caching</p>
-                    </div>
-                </li>
-                <li class="reveal">
-                    <div class="when">September 2023 – March 2024<br>Remote</div>
-                    <div>
-                        <h3>Software Developer Intern <small>· Optimum Info</small></h3>
-                        <ul>
-                            <li>Designed and built an HRMS covering onboarding, payroll, leave management and access
-                                control for internal HR operations.</li>
-                            <li>Developed responsive UI with HTML, CSS, JavaScript, Bootstrap and jQuery.</li>
-                            <li>Built backend services with ASP.NET Core and C#, integrated with SQL Server.</li>
-                        </ul>
-                        <p class="tech"><b>Technologies:</b> ASP.NET Core, C#, JavaScript, jQuery, SQL Server, Git</p>
-                    </div>
-                </li>
-            </ol>
-            <h3 class="sub">Education</h3>
-            <ol class="tl" style="gap:22px">
-                <li>
-                    <div class="when">2020 – 2024</div>
-                    <div>
-                        <h3>B.Tech in Computer Science <small>· I.T.S. Engineering College</small></h3>
-                        <p class="tech">79%</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="when">2019 – 2020</div>
-                    <div>
-                        <h3>Class XII – PCM <small>· Green Field Public School</small></h3>
-                        <p class="tech">91.8%</p>
-                    </div>
-                </li>
-            </ol>
-            <h3 class="sub">Skills</h3>
-            <div class="chips"><span>Java</span><span>Spring
-                    Boot</span><span>C++</span><span>C#</span><span>ASP.NET</span><span>SQL</span><span>REST
-                    APIs</span><span>PostgreSQL</span><span>Docker</span><span>Git</span><span>Jenkins</span><span>Postman</span><span>React.js</span><span>JavaScript</span><span>HTML/CSS</span><span>Bootstrap</span><span>MongoDB</span>
-            </div>
-            <h3 class="sub">Activities &amp; Achievements</h3>
-            <p style="color:var(--mute);max-width:720px">Led teams in Tech-a-thon 2.0 and Code-o-Fiesta; Top 5 finalist
-                at IIMT College Greater Noida Hackathon (2023). Co-founded and revived student-run cultural clubs.</p>
-            <p style="margin:30px 0 40px"><a class="btn" href="work.html">See my projects ↗</a></p>
-        </div>
-    </main>
-    
-<footer class="contact" id="contact">
-    <div class="wrap contact-main">
-        <div class="contact-top">
-            <span class="contact-eyebrow">
-                <span class="status-dot"></span>
-                HAVE A PROJECT IN MIND?
-            </span>
-            <span class="contact-index">LET'S CONNECT — 2026</span>
-        </div>
 
-        <div class="contact-content">
-            <div class="contact-heading">
-                <h2>Let's make<br>something <span>great.</span></h2>
-                <p>
-                    I enjoy building useful software, solving backend
-                    problems and turning ideas into real products.
-                    Have an opportunity or an interesting idea?
-                    Let's talk.
-                </p>
-            </div>
-
-            <div class="contact-side">
-                <span class="contact-label">GET IN TOUCH</span>
-
-                <a class="contact-email"
-                   href="mailto:amitsr0208@gmail.com?subject=Let's%20Connect">
-                    amitsr0208@gmail.com
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <a class="contact-phone" href="tel:+919643362998">
-                    +91 96433 62998
-                </a>
-
-                <div class="contact-actions">
-                    <a class="btn fill"
-                       href="mailto:amitsr0208@gmail.com?subject=Let's%20Connect">
-                        Say Hello <span>↗</span>
-                    </a>
-
-                    <a class="btn resume-btn"
-                       href="./resume/amitResume2026.pdf"
-                       download>
-                        Download Résumé ↓
-                    </a>
+                <div>
+                    <h1>Experience</h1>
+                    <p class="experience-intro">
+                        A look at my professional journey, the projects I've
+                        contributed to, the technologies I work with, and
+                        the experiences that have shaped me as a developer.
+                    </p>
                 </div>
+
+                <div class="acts no-print">
+
+                    <a class="btn fill" href="./resume/amitResume2026.pdf" download>
+                        Download PDF résumé
+                    </a>
+
+                    <button class="btn" onclick="window.print()">
+                        Print this page
+                    </button>
+
+                </div>
+
             </div>
+
+
+            <!-- PROFESSIONAL EXPERIENCE -->
+
+            <ol class="tl" style="margin-top: 35px;">
+
+                <!-- VIA.COM -->
+
+                <li class="reveal">
+
+                    <div class="when">
+                        August 2024 – Present
+                        <br>
+                        Ghaziabad, India
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Software Development Engineer
+                            <small>· Via.com (Ebix)</small>
+                        </h3>
+
+                        <p class="experience-summary">
+                            Working on backend development for travel technology
+                            platforms, with a focus on flight booking systems,
+                            airline integrations, and improving existing
+                            application workflows.
+                        </p>
+
+
+                        <ul class="experience-list">
+
+                            <li>
+                                <b>Flight Booking & Post-Booking:</b>
+                                Worked on Indigo post-booking features, including
+                                seat, meal, and baggage services, helping improve
+                                the experience of managing bookings after
+                                ticket confirmation.
+                            </li>
+
+                            <li>
+                                <b>Special Fare Programs:</b>
+                                Developed backend functionality for special
+                                fares, including search workflows, fare
+                                eligibility, and coordination with frontend
+                                and product teams.
+                            </li>
+
+                            <li>
+                                <b>Microservice Development:</b>
+                                Built a traveller details bulk-upload feature,
+                                taking it from initial development through
+                                testing and production deployment.
+                            </li>
+
+                            <li>
+                                <b>Flight Search & Fare Accuracy:</b>
+                                Resolved production issues affecting connecting
+                                flights, fare displays, and booking information
+                                to improve platform reliability.
+                            </li>
+
+                            <li>
+                                <b>Travel Partner Integration:</b>
+                                Contributed to integrating BookNTravel into the
+                                flight booking platform, supporting search,
+                                fare confirmation, and booking workflows.
+                            </li>
+
+                            <li>
+                                <b>Airline Loyalty Integration:</b>
+                                Worked on Akasa Air frequent flyer functionality
+                                and supported its release to production.
+                            </li>
+
+                            <li>
+                                <b>Reporting & Platform Improvements:</b>
+                                Improved refund reporting and contributed to
+                                other flight platform enhancements, including
+                                fare rules and ticket-related services.
+                            </li>
+
+                        </ul>
+
+
+                        <div>
+                            <a href="projects/via.html"
+                                class="btn case-study-link"
+                                style="padding: 7px 16px; font-size: 13px;">
+                                View Via.com Case Study
+                                <span>↗</span>
+                            </a>
+                        </div>
+
+
+                        <p class="tech">
+                            <b>Technologies:</b>
+                            Java, Spring Boot, Microservices, REST APIs,
+                            PostgreSQL, Git, Jenkins, Caching
+                        </p>
+
+                    </div>
+
+                </li>
+
+
+                <!-- OPTIMUM INFO -->
+
+                <li class="reveal">
+
+                    <div class="when">
+                        September 2023 – March 2024
+                        <br>
+                        Remote
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Software Developer Intern
+                            <small>· Optimum Info</small>
+                        </h3>
+
+                        <p class="experience-summary">
+                            Worked as a full-stack developer, contributing
+                            to the development of an HR Management System
+                            for internal business operations.
+                        </p>
+
+                        <ul class="experience-list">
+
+                            <li>
+                                <b>HRMS Development:</b>
+                                Developed an HR Management System covering
+                                employee onboarding, payroll, leave management,
+                                and access control.
+                            </li>
+
+                            <li>
+                                <b>Frontend Development:</b>
+                                Built responsive user interfaces using HTML,
+                                CSS, JavaScript, Bootstrap, and jQuery.
+                            </li>
+
+                            <li>
+                                <b>Backend Development:</b>
+                                Developed backend functionality using
+                                ASP.NET Core and C#, with SQL Server
+                                for data management.
+                            </li>
+
+                        </ul>
+
+                        <p class="tech">
+                            <b>Technologies:</b>
+                            ASP.NET Core, C#, JavaScript, jQuery,
+                            Bootstrap, SQL Server, Git
+                        </p>
+
+                    </div>
+
+                </li>
+
+            </ol>
+
+
+            <!-- EDUCATION -->
+
+            <h3 class="sub">Education</h3>
+
+            <ol class="tl" style="gap: 22px;">
+
+                <li class="reveal">
+
+                    <div class="when">
+                        2020 – 2024
+                    </div>
+
+                    <div class="education-item">
+
+                        <div>
+                            <h3>
+                                B.Tech in Computer Science
+                                <small>· I.T.S. Engineering College</small>
+                            </h3>
+                        </div>
+
+                        <span class="education-score">79%</span>
+
+                    </div>
+
+                </li>
+
+
+                <li class="reveal">
+
+                    <div class="when">
+                        2019 – 2020
+                    </div>
+
+                    <div class="education-item">
+
+                        <div>
+                            <h3>
+                                Class XII – PCM
+                                <small>· Green Field Public School</small>
+                            </h3>
+                        </div>
+
+                        <span class="education-score">91.8%</span>
+
+                    </div>
+
+                </li>
+
+
+                <li class="reveal">
+
+                    <div class="when">
+                        2017 – 2018
+                    </div>
+
+                    <div class="education-item">
+
+                        <div>
+                            <h3>
+                                Class X
+                                <small>· Green Field Public School</small>
+                            </h3>
+                        </div>
+
+                        <span class="education-score">82%</span>
+
+                    </div>
+
+                </li>
+
+            </ol>
+
+
+            <!-- SKILLS -->
+
+            <h3 class="sub">Technical Skills</h3>
+
+            <p class="section-note">
+                Technologies and tools I've worked with across professional
+                projects, internships, and personal development.
+            </p>
+
+
+            <div class="skill-groups">
+
+                <div class="skill-group">
+
+                    <h4>Backend Development</h4>
+
+                    <div class="chips">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>C#</span>
+                        <span>ASP.NET Core</span>
+                        <span>REST APIs</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h4>Databases</h4>
+
+                    <div class="chips">
+                        <span>PostgreSQL</span>
+                        <span>SQL Server</span>
+                        <span>MongoDB</span>
+                        <span>SQL</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h4>Frontend Development</h4>
+
+                    <div class="chips">
+                        <span>React.js</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h4>Tools & Platforms</h4>
+
+                    <div class="chips">
+                        <span>Git</span>
+                        <span>Jenkins</span>
+                        <span>Docker</span>
+                        <span>AWS</span>
+                        <span>Postman</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVITIES AND ACHIEVEMENTS -->
+
+            <h3 class="sub">Activities & Achievements</h3>
+
+            <p class="section-note">
+                Experiences beyond everyday development that helped me
+                build collaboration, leadership, and problem-solving skills.
+            </p>
+
+
+            <div class="achievement-list">
+
+                <div class="achievement-item">
+
+                    <i class="fa fa-trophy"></i>
+
+                    <p>
+                        Led teams in Tech-a-thon 2.0 and Code-o-Fiesta,
+                        participating in collaborative technical events.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-item">
+
+                    <i class="fa fa-star"></i>
+
+                    <p>
+                        Secured a Top 5 finalist position at the
+                        IIMT College Greater Noida Hackathon (2023).
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-item">
+
+                    <i class="fa fa-users"></i>
+
+                    <p>
+                        Co-founded and helped revive student-run
+                        cultural clubs, contributing to student
+                        engagement and campus activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECTS CTA -->
+
+            <p style="margin: 35px 0 45px;">
+                <a class="btn" href="work.html">
+                    Explore My Projects ↗
+                </a>
+            </p>
+
         </div>
 
-        <div class="contact-bottom">
-            <a class="footer-brand" href="#">
-                <span>@</span>mit rawat<span class="brand-period">.</span>
-            </a>
+    </main>
 
-            <div class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="work.html">Work</a>
-                <a href="experience.html">Experience</a>
+
+    <!-- FOOTER -->
+
+    <footer class="contact" id="contact">
+
+        <div class="wrap contact-main">
+
+            <div class="contact-top">
+
+                <span class="contact-eyebrow">
+                    <span class="status-dot"></span>
+                    HAVE A PROJECT IN MIND?
+                </span>
+
+                <span class="contact-index">
+                    LET'S CONNECT — 2026
+                </span>
+
             </div>
 
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/amit-rawat-47713020"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="LinkedIn">in <span>↗</span></a>
 
-                <a href="https://github.com/Rookie0208"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="GitHub">gh <span>↗</span></a>
+            <div class="contact-content">
 
-                <a href="https://www.instagram.com/amitrawat0208"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="Instagram">ig <span>↗</span></a>
+                <div class="contact-heading">
 
-                <a href="https://x.com/AmitRawt1"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="X">x <span>↗</span></a>
+                    <h2>
+                        Let's make<br>
+                        something <span>great.</span>
+                    </h2>
+
+                    <p>
+                        I enjoy building useful software, solving backend
+                        problems and turning ideas into real products.
+                        Have an opportunity or an interesting idea?
+                        Let's talk.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-side">
+
+                    <span class="contact-label">GET IN TOUCH</span>
+
+                    <a class="contact-email"
+                        href="mailto:amitsr0208@gmail.com?subject=Let's%20Connect">
+
+                        amitsr0208@gmail.com
+
+                        <span class="contact-arrow">↗</span>
+
+                    </a>
+
+
+                    <a class="contact-phone" href="tel:+919643362998">
+                        +91 96433 62998
+                    </a>
+
+
+                    <div class="contact-actions">
+
+                        <a class="btn fill"
+                            href="mailto:amitsr0208@gmail.com?subject=Let's%20Connect">
+                            Say Hello <span>↗</span>
+                        </a>
+
+                        <a class="btn resume-btn"
+                            href="./resume/amitResume2026.pdf"
+                            download>
+                            Download Résumé ↓
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
+
+
+            <div class="contact-bottom">
+
+                <a class="footer-brand" href="index.html">
+                    <span>@</span>mit rawat<span class="brand-period">.</span>
+                </a>
+
+
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="work.html">Work</a>
+                    <a href="experience.html">Experience</a>
+                </div>
+
+
+                <div class="footer-socials">
+
+                    <a href="https://www.linkedin.com/in/amit-rawat-47713020"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        in <span>↗</span>
+                    </a>
+
+                    <a href="https://github.com/Rookie0208"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        gh <span>↗</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/amitrawat0208"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        ig <span>↗</span>
+                    </a>
+
+                    <a href="https://x.com/AmitRawt1"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="X">
+                        x <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-legal">
+
+                <span>© 2026 Amit Rawat. All rights reserved.</span>
+
+                <span>Designed & built with curiosity.</span>
+
+                <a href="#top"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                    BACK TO TOP ↑
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="footer-legal">
-            <span>© 2026 Amit Rawat. All rights reserved.</span>
-            <span>Designed & built with curiosity.</span>
-            <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-                BACK TO TOP ↑
-            </a>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+
     <script src="main.js"></script>
-</body>
 
+</body>
 </html>

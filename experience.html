@@ -34,26 +34,23 @@
                     <div class="when">August 2024 – Present<br>Ghaziabad, India</div>
                     <div>
                         <h3>Software Development Engineer <small>· Via.com (Ebix)</small></h3>
+                        <p style="margin: 8px 0 14px 0; color: var(--mute); font-size: 14.5px; line-height: 1.6;">
+                            <b>Headline Themes:</b> Post-booking & ancillaries (Indigo post-SSR / sell-SSR, retrieve-booking API extensions) · Fare & deal-fare reliability · Integrations & platform (BookNTravel v2, Akasa FF, special fares) · Ops & reporting (Traveller bulk upload microservice, refund tally reporting).
+                        </p>
                         <ul>
-                            <li>Built end-to-end flight supplier integrations (BookNTravel, Travelopedia, Just Click N
-                                Pay) covering search, reprice, booking and ticketing for series fares across domestic
-                                and international routes.</li>
-                            <li>Delivered NDC-based booking for Scoot, Sabre and Star Air, including branded fares,
-                                meals, baggage, seats and ticketing for one-way, return and connecting journeys.</li>
-                            <li>Extended the Series Fare platform to support pluggable agent-supplied fare sources
-                                without breaking existing flows, cutting new-supplier integration time from ~4 weeks to
-                                ~4-5 days.</li>
-                            <li>Added B2C fare filtering and lowest-deal-fare logic, surfacing the most relevant and
-                                lowest-cost options for both B2B agents and B2C users.</li>
-                            <li>Integrated Air Arabia (G9) with live availability, bundle fares and fare rules, and
-                                automated ingestion of newly released sectors.</li>
-                            <li>Diagnosed and resolved ~8-10 production booking issues/month across IndiGo, Scoot, Star
-                                Air and series-fare flows, identifying root causes to prevent recurrence rather than
-                                repeated patching.</li>
-                            <li>Fixed input-handling and XML-parsing vulnerabilities as part of a PCI DSS compliance
-                                effort across the booking stack.</li>
+                            <li><b>Indigo post-booking & post-SSR (postBookingFlowV2):</b> Designed and implemented post-booking flow (RnD → retrieve-booking changes → post-SSR for seat/meal/baggage). Built sell-SSR flow for Indigo; added validations, catalogue/API changes, and post-booking actions in retrieve API responses for UI consumption. Collaborated with product/UI on phased rollout (post-SSR → sell-SSR). <i>[Keywords: post-booking, ancillaries, SSR, retrieve PNR, API design, Indigo integration]</i></li>
+                            <li><b>Special fare program:</b> Delivered special fare backend: flow from search through contracts, caching, and coordination with UI/product on senior/student/corporate-style fares. Debugged cross-team issues (caching, contracts, UI rules). <i>[Keywords: fare rules, caching, B2B/B2C flights, cross-functional delivery]</i></li>
+                            <li><b>Traveller details bulk upload:</b> End-to-end bulk traveller document/update feature: RnD, microservice build, hosted + connected to India server, web.xml/config, DOI/formatting, QA and production go-live (with UI team). <i>[Keywords: microservices, bulk upload, prod deployment, document automation]</i></li>
+                            <li><b>Deal fares & flight display correctness:</b> Fixed [VI-2550] class of bugs: stopover/connecting flights shown as NON-STOP across Deal Fares 1–4 (investigate → fix → release). Shipped fixes for Deal Fare 4 (oops page, commission), duplicate deal fares on B2B, and related connecting-sector issues. <i>[Keywords: deal fares, flight display, bug triage, hotfix, production support]</i></li>
+                            <li><b>BookNTravel API v2:</b> Integrated BookNTravel (search/reprice/book path): code review, merge to master, full integration testing, production release, and follow-up fixes (agent commission, GDS type mismatch, Sabre/BNT misc collision). <i>[Keywords: third-party API, series/search integration, go-live, regression fixes]</i></li>
+                            <li><b>Akasa Air frequent flyer (FFP):</b> Implemented and released Akasa Air FFP; handled manual-booking edge cases and API URL updates through QA to live.</li>
+                            <li><b>Fast-Forward refunds – reporting:</b> Fixed Fast-Forward refund tally report (price not captured in report); investigation through merge-ready fix. <i>[Git anchor: Fast Forward Price not captured in refund tally Report]</i></li>
+                            <li><b>Supporting flight platform work:</b> G9 / 3L fare rules (baggage, flight details, fare rules loading); Fast Forward print ticket / SSR on print; Unknown Flight enablement for B2B and corporate; Email fares (&ge;3 segments) and assorted deal-fare / Air India GDS production issues.</li>
                         </ul>
-                        <p class="tech"><b>Technologies:</b> Java, SOLID, REST APIs, JSP, PostgreSQL, Git, Jenkins</p>
+                        <div style="margin: 12px 0 16px 0;">
+                            <a href="projects/via.html" class="btn" style="padding: 7px 16px; font-size: 13px;">View Full Via.com Case Study ↗</a>
+                        </div>
+                        <p class="tech"><b>Technologies:</b> Java, Spring Boot, Microservices, REST APIs, Indigo APIs, GDS, PostgreSQL, Git, Jenkins, Caching</p>
                     </div>
                 </li>
                 <li class="reveal">
